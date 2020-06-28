@@ -6,8 +6,14 @@ def main():
 	for i in range(0,dice_rolls):
 		roll = random.randint(1,6)
 		dice_sum += roll 
-		print("You rolled a {}".format(roll))
-    print("You have rolled a total of {}".format(dice_sum))
+		if roll == 1:
+			print("You rolled a {}! Critical Fail".format(roll))
+		elif roll == 6:
+			print("You rolled a {}! Critical Success!".format(roll))
+		else:
+			print("You rolled a {}".format(roll))
+
+
 
 
 if __name__== "__main__":
